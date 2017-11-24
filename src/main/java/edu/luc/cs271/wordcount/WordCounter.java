@@ -41,14 +41,12 @@ public class WordCounter {
   public int getCount(final String word) {
 
     // TODO
-    int counter = 0;
+    int count = theMap.get(word);
     if (theMap.containsKey(word)) {
-      counter = theMap.get(word);
-      theMap.put(word, counter);
-    } else theMap.put(word, 0);
-    return counter;
-  }
-
+      return count;
+    } else {
+      return 0;
+    }
   }
 
   /** Retrieve the map representing all word frequencies. */

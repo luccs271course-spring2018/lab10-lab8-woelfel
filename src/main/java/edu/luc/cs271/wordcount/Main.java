@@ -11,7 +11,7 @@ public class Main {
 
     // TODO complete this main program
     // 1. create a WordCounter instance
-    Map<String, Integer> map = new HashMap<>();
+    Map<String, Integer> map = new HashMap<String, Integer>();
     WordCounter counter = new WordCounter(map);
     // 2. use this to count the words in the input
     counter.countWords(input);
@@ -31,8 +31,8 @@ public class Main {
       }
     } 
       else {
-      for (int i = 0; i < 10; i++) {
-        System.out.println(entries.get(i));
+        for (int i = 0; i < 10; i++) {
+          System.out.println(entries.get(i));
       }
     }
 
