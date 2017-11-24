@@ -40,13 +40,13 @@ public class TestWordCounter {
     // TODO run the SUT on a specific String iterator with some repeated words,
     // then use assertions to verify the correct counts
     // do this for at least two words in the iterator and two not in the iterator
-     Iterator itr = Arrays.asList("hey", "hi", "hello", "world", "hello", "hi").iterator();
+     Iterator itr = Arrays.asList("hello", "world", "hello", "world", "goodbye", "world").iterator();
     count.countWords(itr);
     assertEquals(2, count.getCount("hello"));
-    assertEquals(2, count.getCount("hi"));
-    assertNotEquals(2, count.getCount("world"));
-    assertNotEquals(2, count.getCount("hey"));
-    assertNotEquals(1, count.getCount("bye"));
+    assertEquals(3, count.getCount("hello"));
+    assertNotEquals(3, count.getCount("world"));
+    assertNotEquals(2, count.getCount("hel"));
+    assertNotEquals(1, count.getCount("goodbye"));
 
   }
 }
