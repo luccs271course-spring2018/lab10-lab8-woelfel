@@ -5,13 +5,15 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import java.util.*;
 
 public class TestWordCounter {
 
   // TODO complete this test class
 
   // TODO declare a reference to the SUT (system under test), i.e., WordCounter
-  Map<String, Integer> mapRef = new HashMap<>();
+  private WordCounter counter;
+  Map<String, Integer> mapRef = new HashMap<String, Integer>();
   WordCounter counter = new WordCounter(mapRef);
 
   @Before
