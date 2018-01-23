@@ -11,7 +11,7 @@ public class Main {
 
     // TODO complete this main program
     // 1. create a WordCounter instance
-    Map<String, Integer> map = new HashMap<String, Integer>();
+    Map<String, Integer> map = new HashMap<>();
     WordCounter counter = new WordCounter(map);
     // 2. use this to count the words in the input
     counter.countWords(input);
@@ -25,7 +25,7 @@ public class Main {
     //    using Collections.sort and an instance of the provided comparator (after fixing the latter)
     Collections.sort(entries, new DescendingByCount());
     // 7. print the (up to) ten most frequent words in the text
-    if (counter.getCounts().size() <= 10) {
+    if (counter.getCounts().size() < 11) {
       for (int i = 0; i < counter.getCounts().size(); i++) {
         System.out.println(entries.get(i));
       }
